@@ -1,3 +1,21 @@
+@keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+  }
+  @keyframes myAnim {
+	0% {
+		opacity: 0;
+		transform: translateY(-250px) rotate(-200deg);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0) rotate(0deg);
+	}
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -42,6 +60,12 @@ main{
     column-gap: 5rem;
     row-gap: 5rem;
 
+    animation-name: example;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+    
+
 }
 aside{ 
     background-color: bisque;
@@ -67,7 +91,7 @@ aside > button {
 .box {
 
     background-color:azure;
-
+    animation: myAnim 1s ease 0s 1 normal forwards;
     width: 20rem;
     height: 20rem;
 
@@ -75,9 +99,17 @@ aside > button {
     justify-content: center;
     align-items: center;
 
- 
+    transition: 
+    background-color 0.
+    5s ease-in-out;
 
 
+}
+
+.box:hover{
+    background-color: blue;
+    transition: width 2s ease-in-out;
+    width: 300px;
 }
 
 .box > p{
@@ -96,9 +128,9 @@ footer{
   
 }
 
-
 footer > p{
-   padding: 0;
-   margin: 0;
-   
-}
+    padding: 0;
+    margin: 0;
+    
+ }
+
